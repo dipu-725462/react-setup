@@ -1,7 +1,7 @@
 {
   "name": "react-setup",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Boilerplate for React, Node, Babel & Webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

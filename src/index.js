@@ -1,11 +1,10 @@
-const express = require('express');
-const React = require('react');
-const ReactDomServer = require('react-dom/server');
+import express from 'express';
+import React from 'react';
+import ReactDomServer from 'react-dom/server';
 
-const Home = require('./client/components/Home').default;
+import Home from '../src/client/components/Home';
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {

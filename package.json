@@ -4,6 +4,7 @@
   "description": "A Boilerplate for React, Node, Babel & Webpack",
   "main": "index.js",
   "scripts": {
+    "dev:server" : "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build:server": "webpack --config webpack.server.js"
   },
   "repository": {

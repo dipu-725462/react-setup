@@ -7,6 +7,7 @@ module.exports = {
   mode: 'production',
   externals: [nodeExternals()],
   target: 'node',
+  watch: true,
   entry: './src/index',
   output: {
     filename: 'bundle.js',

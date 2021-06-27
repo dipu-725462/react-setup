@@ -4,7 +4,7 @@
   "description": "A Boilerplate for React, Node, Babel & Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:build:server": "webpack --config webpack.server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/dipu-725462/react-setup/issues"
   },
-  "homepage": "https://github.com/dipu-725462/react-setup#readme"
+  "homepage": "https://github.com/dipu-725462/react-setup#readme",
+  "devDependencies": {
+    "@babel/core": "7.14.6",
+    "@babel/preset-env": "7.14.7",
+    "@babel/preset-react": "7.14.5",
+    "babel-loader": "8.0.0",
+    "webpack-cli": "4.7.2"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "webpack": "4.44.2",
+    "webpack-node-externals": "^3.0.0"
+  }
 }

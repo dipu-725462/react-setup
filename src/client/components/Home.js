@@ -3,11 +3,11 @@ import React from 'react';
 const HomePage = () => {
 
   const handleClick = () => {
-    console.log('You clicked Button !');
+    console.log('You clicked Buttons !');
   };
 
   return (<div>
-    <p>This is Home-Page</p>
+    <p>This is Home ➞ Page</p>
     <button
       onClick={handleClick}>
       Click Me

@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  const html = renderer();
+app.get('*', (req, res) => {
+  const html = renderer(req);
   res.send(html);
 });
 

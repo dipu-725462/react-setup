@@ -1,18 +1,22 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 
-import HomePage from '../client/components/Home';
+import Routes from '../Routes';
 
-const renderer = () => {
-  const content = renderToString(<HomePage />);
+const renderer = (req) => {
+  const content = renderToString(
+    <StaticRouter location={req.path} context={{}}>
+      <Routes />
+    </StaticRouter>
+  );
+
   const html = `
     <html>
       <head></head>
       <body>
-      <div id='root'>
-        ${content}
+      <div id='root'>${content}</div>
         <script type="module" src='bundle.js'></script>
-      </div>
       </body>
     </html>
   `;

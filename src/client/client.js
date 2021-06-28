@@ -13,14 +13,15 @@ import { Provider } from 'react-redux';
 import reducers from './reducers';
 import Routes from '../Routes';
 
-const store = createStore(reducers, {}, applyMiddleware(thunk));
+const INITIAL_STATE = window.INITIAL_STATE || {};
+
+const store = createStore(reducers, INITIAL_STATE, applyMiddleware(thunk));
 
 const ClientApp = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
         {renderRoutes(Routes)}
-        
       </BrowserRouter>
     </Provider>
   )

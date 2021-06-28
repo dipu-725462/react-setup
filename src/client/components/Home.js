@@ -8,7 +8,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <p>This is ➞ Home 🏠 Page 📃</p>
+      <h1>This is ➞ Home Page 🏠 🎁 😎</h1>
       <button
         onClick={handleClick}>
         Click Me

@@ -22,3 +22,13 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);
+
+
+
+const loadUserList = (store) => {
+  return store.dispatch(fetchUsers());
+}
+
+export {
+  loadUserList
+};

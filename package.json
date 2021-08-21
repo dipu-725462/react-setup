@@ -1,10 +1,13 @@
 {
   "name": "react-setup",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Boilerplate for React, Node, Babel & Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev:build-server": "webpack --config webpack.server.js",
+    "dev:build-client": "webpack --config webpack.client.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,29 @@
   "bugs": {
     "url": "https://github.com/dipu-725462/react-setup/issues"
   },
-  "homepage": "https://github.com/dipu-725462/react-setup#readme"
+  "homepage": "https://github.com/dipu-725462/react-setup#readme",
+  "devDependencies": {
+    "@babel/core": "7.14.6",
+    "@babel/preset-env": "7.14.7",
+    "@babel/preset-react": "7.14.5",
+    "babel-loader": "8.0.0",
+    "webpack": "4.44.2",
+    "webpack-cli": "4.7.2",
+    "webpack-merge": "4.2.2",
+    "webpack-node-externals": "3.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.12.1",
+    "axios": "0.21.1",
+    "express": "4.17.1",
+    "npm-run-all": "4.1.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.2.4",
+    "react-router-config": "5.1.1",
+    "react-router-dom": "5.2.0",
+    "redux": "4.1.0",
+    "redux-thunk": "2.3.0",
+    "serialize-javascript": "6.0.0"
+  }
 }
